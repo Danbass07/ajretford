@@ -1,5 +1,13 @@
 const mix = require("laravel-mix");
 
+require("laravel-mix-svelte");
+
+mix.js("resources/js/app.js", "public/js")
+    .sass("resources/sass/app.scss", "public/css")
+    .svelte({
+        dev: true,
+    });
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,11 +19,11 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.js("resources/js/app.js", "public/js").postCss(
-    "resources/css/app.css",
-    "public/css",
-    [require("postcss-import"), require("tailwindcss")]
-);
+// mix.js("resources/js/app.js", "public/js").postCss(
+//     "resources/css/app.css",
+//     "public/css",
+//     [require("postcss-import"), require("tailwindcss")]
+// );
 
 if (mix.inProduction()) {
     mix.version();
