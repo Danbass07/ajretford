@@ -10,6 +10,7 @@
     <div class="top_bar" transition:fade>
         <ButtonGroup>
             <Button
+                style="width:150px"
                 size="lg"
                 color={user === "user" ? "success" : "primary"}
                 on:click={() => {
@@ -17,6 +18,7 @@
                 }}>TAXI</Button
             >
             <Button
+                style="width:150px"
                 size="lg"
                 color={user === "vip" ? "success" : "primary"}
                 on:click={() => {
@@ -24,6 +26,7 @@
                 }}>VIP</Button
             >
             <Button
+                style="width:150px"
                 size="lg"
                 color={user === "customer" ? "success" : "primary"}
                 on:click={() => {
@@ -33,31 +36,37 @@
         </ButtonGroup>
     </div>
     {#if user === "user"}
-        <div transition:fade>
-            <Button
-                color={action === "setWorkingDays" ? "success" : "primary"}
-                on:click={() => {
-                    action = "setWorkingDays";
-                }}>Edit your calendar</Button
-            >
-            <Button
-                color={action === "acceptJobs" ? "success" : "primary"}
-                on:click={() => {
-                    action = "acceptJobs";
-                }}>Avaiable Offers</Button
-            >
-            <Button
-                color={action === "bookings" ? "success" : "primary"}
-                on:click={() => {
-                    action = "bookings";
-                }}>Your Booking</Button
-            >
-            <Button
-                color={action === "history" ? "success" : "primary"}
-                on:click={() => {
-                    action = "history";
-                }}>Completed Bookings</Button
-            >
+        <div class="top_bar" transition:fade>
+            <ButtonGroup>
+                <Button
+                    style="width:150px"
+                    color={action === "setWorkingDays" ? "success" : "primary"}
+                    on:click={() => {
+                        action = "setWorkingDays";
+                    }}>Edit Calendar</Button
+                >
+                <Button
+                    style="width:150px"
+                    color={action === "acceptJobs" ? "success" : "primary"}
+                    on:click={() => {
+                        action = "acceptJobs";
+                    }}>Avaiable Offers</Button
+                >
+                <Button
+                    style="width:150px"
+                    color={action === "bookings" ? "success" : "primary"}
+                    on:click={() => {
+                        action = "bookings";
+                    }}>Your Booking</Button
+                >
+                <Button
+                    style="width:150px"
+                    color={action === "history" ? "success" : "primary"}
+                    on:click={() => {
+                        action = "history";
+                    }}>Completed Bookings</Button
+                >
+            </ButtonGroup>
         </div>
         {#if action === "setWorkingDays"}
             <div transition:fade>
@@ -87,7 +96,7 @@
 
 <style>
     .top_bar {
-        width: 600px;
+        min-width: 600px;
         margin-bottom: 5px;
     }
     /* .top {

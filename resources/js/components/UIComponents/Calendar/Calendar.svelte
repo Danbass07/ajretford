@@ -69,8 +69,8 @@
 </script>
 
 <main>
-    <Container>
-        <Card class="mb-3">
+    <Container class="md" style="min-width:590px; max-width:590px">
+        <Card class="mb-3 main-card">
             <CardHeader>
                 <Row>
                     <Col>
@@ -151,7 +151,7 @@
 <style>
     main {
         margin: 0 auto;
-        width: 590px;
+        min-width: 620px;
     }
 
     .weekday {
@@ -162,10 +162,10 @@
         margin: 5px 0px;
     }
 
-    @media (min-width: 640px) {
+    /* @media (min-width: 640px) {
         main {
             display: flex;
             flex-wrap: wrap;
         }
-    }
+    } */
 </style>

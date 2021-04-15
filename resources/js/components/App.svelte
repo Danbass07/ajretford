@@ -11,6 +11,6 @@
         text-align: center;
         padding: 1em;
         margin: 0 auto;
-        width: 600px;
+        min-width: 590px;
     }
 </style>

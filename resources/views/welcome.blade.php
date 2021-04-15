@@ -19,7 +19,8 @@
                 font-family: 'Nunito', sans-serif;
             }
             .antialiased{
-                width: 600px;
+                min-width: 620px;
+                max-width: 620px;
                 margin: 0 auto;
             }
         </style>
