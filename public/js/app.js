@@ -33821,8 +33821,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function add_css() {
   var style = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("style");
-  style.id = "svelte-1cmmfv3-style";
-  style.textContent = "main.svelte-1cmmfv3{margin:0 auto;width:390px}.weekday.svelte-1cmmfv3{width:78px;font-size:1.2rem;float:left;text-align:center;margin:5px 0px}@media(min-width: 640px){main.svelte-1cmmfv3{display:flex;flex-wrap:wrap}}";
+  style.id = "svelte-kw540d-style";
+  style.textContent = "main.svelte-kw540d{margin:0 auto;width:590px}.weekday.svelte-kw540d{width:78px;font-size:1.2rem;float:left;text-align:center;margin:5px 0px}@media(min-width: 640px){main.svelte-kw540d{display:flex;flex-wrap:wrap}}";
   (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(document.head, style);
 }
 
@@ -34429,13 +34429,13 @@ function create_default_slot_6(ctx) {
       }
 
       each_1_anchor = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.empty)();
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "text-light weekday svelte-1cmmfv3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "text-light weekday svelte-1cmmfv3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "text-light weekday svelte-1cmmfv3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "text-light weekday svelte-1cmmfv3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "text-light weekday svelte-1cmmfv3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "text-light weekday svelte-1cmmfv3");
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "text-light weekday svelte-1cmmfv3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div0, "class", "text-light weekday svelte-kw540d");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div1, "class", "text-light weekday svelte-kw540d");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div2, "class", "text-light weekday svelte-kw540d");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div3, "class", "text-light weekday svelte-kw540d");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div4, "class", "text-light weekday svelte-kw540d");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div5, "class", "text-light weekday svelte-kw540d");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div6, "class", "text-light weekday svelte-kw540d");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, div0, anchor);
@@ -35121,7 +35121,7 @@ function create_fragment(ctx) {
     c: function c() {
       main = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("main");
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(container.$$.fragment);
-      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(main, "class", "svelte-1cmmfv3");
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(main, "class", "svelte-kw540d");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, main, anchor);
@@ -35243,7 +35243,7 @@ var Calendar = /*#__PURE__*/function (_SvelteComponent) {
     _classCallCheck(this, Calendar);
 
     _this = _super.call(this);
-    if (!document.getElementById("svelte-1cmmfv3-style")) add_css();
+    if (!document.getElementById("svelte-kw540d-style")) add_css();
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       action: 0
     });
