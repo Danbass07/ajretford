@@ -1,6 +1,6 @@
 <script>
     import Calendar from "../UIComponents/Calendar/Calendar.svelte";
-    import { Button } from "sveltestrap";
+    import { Button, ButtonGroup } from "sveltestrap";
     import { fly, fade, slide } from "svelte/transition";
     let user;
     let action;
@@ -8,24 +8,29 @@
 
 <main>
     <div class="top_bar" transition:fade>
-        <Button
-            color={user === "user" ? "success" : "primary"}
-            on:click={() => {
-                user = "user";
-            }}>taxi</Button
-        >
-        <Button
-            color={user === "vip" ? "success" : "primary"}
-            on:click={() => {
-                user = "vip";
-            }}>VIP</Button
-        >
-        <Button
-            color={user === "customer" ? "success" : "primary"}
-            on:click={() => {
-                user = "customer";
-            }}>Customer</Button
-        >
+        <ButtonGroup>
+            <Button
+                size="lg"
+                color={user === "user" ? "success" : "primary"}
+                on:click={() => {
+                    user = "user";
+                }}>TAXI</Button
+            >
+            <Button
+                size="lg"
+                color={user === "vip" ? "success" : "primary"}
+                on:click={() => {
+                    user = "vip";
+                }}>VIP</Button
+            >
+            <Button
+                size="lg"
+                color={user === "customer" ? "success" : "primary"}
+                on:click={() => {
+                    user = "customer";
+                }}>Customer</Button
+            >
+        </ButtonGroup>
     </div>
     {#if user === "user"}
         <div transition:fade>
@@ -83,6 +88,9 @@
 <style>
     .top_bar {
         width: 600px;
-        border: 1px solid white;
+        margin-bottom: 5px;
     }
+    /* .top {
+        width: 500px;
+    } */
 </style>

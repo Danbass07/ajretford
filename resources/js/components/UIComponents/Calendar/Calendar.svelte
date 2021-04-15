@@ -129,8 +129,10 @@
 
         {#if selectedDay.length !== 0}
             <h2>
-                {selectedDay[0].day}
-                {selectedDay[0].month}
+                {DateTime.fromObject({
+                    month: selectedDay[0].month,
+                    day: selectedDay[0].day,
+                }).toLocaleString(DateTime.DATE_FULL)}
             </h2>
             <Row cols={4}>
                 {#each selectedDay[1] as timeSlot, v ("timeSlot" + v)}

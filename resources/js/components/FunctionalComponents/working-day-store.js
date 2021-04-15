@@ -24,6 +24,18 @@ function workingDay() {
                 return [...day];
             });
         },
+        changeTimeHour: (v, day) => {
+            let avaiable = !day[1][v].avaiable;
+            day[1].map((timeSlot, index) => {
+                if (index >= v && index < v + 4) {
+                    timeSlot.avaiable = avaiable;
+                }
+            });
+
+            selectedDay.update(() => {
+                return [...day];
+            });
+        },
         clearWorkingDay: () => {
             selectedDay.set([]);
         },

@@ -13,14 +13,25 @@
     $: active = timeSlot.avaiable;
 </script>
 
-<button
-    class={active ? "active " + "timeSlot" : "notActive " + "timeSlot"}
-    on:click={() => {
-        workingDay.changeTime(v, selectedDay);
-    }}
-    >{timeSlot.hour === 0 ? "00" : timeSlot.hour}
-    {timeSlot.minute === 0 ? "00" : timeSlot.minute}
-</button>
+{#if timeSlot.minute === 0}
+    <button
+        class={active ? "active " + "timeSlot" : "notActive " + "timeSlot"}
+        on:click={() => {
+            workingDay.changeTimeHour(v, selectedDay);
+        }}
+        >{timeSlot.hour === 0 ? "00" : timeSlot.hour}
+        {timeSlot.minute === 0 ? "00" : timeSlot.minute}
+    </button>
+{:else}
+    <button
+        class={active ? "active " + "timeSlot" : "notActive " + "timeSlot"}
+        on:click={() => {
+            workingDay.changeTime(v, selectedDay);
+        }}
+        >{timeSlot.hour === 0 ? "00" : timeSlot.hour}
+        {timeSlot.minute === 0 ? "00" : timeSlot.minute}
+    </button>
+{/if}
 
 <style>
     .timeSlot {
