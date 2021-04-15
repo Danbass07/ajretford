@@ -32900,6 +32900,14 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+function add_css() {
+  var style = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.element)("style");
+  style.id = "svelte-yzz5hx-style";
+  style.textContent = ".top_bar.svelte-yzz5hx{width:600px;border:1px solid white}";
+  (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.append)(document.head, style);
+} // (11:8) <Button              color={user === "user" ? "success" : "primary"}              on:click={() => {                  user = "user";              }}>
+
+
 function create_default_slot_6(ctx) {
   var t;
   return {
@@ -33570,6 +33578,7 @@ function create_fragment(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.create_component)(button2.$$.fragment);
       t2 = (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.space)();
       if (if_block) if_block.c();
+      (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.attr)(div, "class", "top_bar svelte-yzz5hx");
     },
     m: function m(target, anchor) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.insert)(target, main, anchor);
@@ -33742,6 +33751,7 @@ var AppMainData = /*#__PURE__*/function (_SvelteComponent) {
     _classCallCheck(this, AppMainData);
 
     _this = _super.call(this);
+    if (!document.getElementById("svelte-yzz5hx-style")) add_css();
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {});
     return _this;
   }

@@ -18,6 +18,10 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .antialiased{
+                width: 600px;
+                margin: 0 auto;
+            }
         </style>
     </head>
     <body class="antialiased">

@@ -7,7 +7,7 @@
 </script>
 
 <main>
-    <div transition:fade>
+    <div class="top_bar" transition:fade>
         <Button
             color={user === "user" ? "success" : "primary"}
             on:click={() => {
@@ -81,4 +81,8 @@
 </main>
 
 <style>
+    .top_bar {
+        width: 600px;
+        border: 1px solid white;
+    }
 </style>
