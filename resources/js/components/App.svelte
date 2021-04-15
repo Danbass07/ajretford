@@ -7,13 +7,7 @@
 </main>
 
 <style>
-    :global(html) {
-        background-color: var(--theme-colors-background, initial);
-        color: var(--theme-colors-text, initial);
-    }
     main {
-        color: var(--theme-colors-text, initial);
-        background-color: var(--theme-colors-background, initial);
         text-align: center;
         padding: 1em;
         margin: 0 auto;
