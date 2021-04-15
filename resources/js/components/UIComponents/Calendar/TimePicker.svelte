@@ -1,5 +1,6 @@
 <script>
     import workingDay from "../../FunctionalComponents/working-day-store";
+    import { Button } from "sveltestrap";
 
     export let timeSlot;
     export let v;
@@ -14,34 +15,28 @@
 </script>
 
 {#if timeSlot.minute === 0}
-    <button
-        class={active ? "active " + "timeSlot" : "notActive " + "timeSlot"}
+    <Button
+        size="sm"
+        style="width: 100px"
+        color={active ? "warning" : "secondary"}
         on:click={() => {
             workingDay.changeTimeHour(v, selectedDay);
         }}
         >{timeSlot.hour === 0 ? "00" : timeSlot.hour}
         {timeSlot.minute === 0 ? "00" : timeSlot.minute}
-    </button>
+    </Button>
 {:else}
-    <button
-        class={active ? "active " + "timeSlot" : "notActive " + "timeSlot"}
+    <Button
+        size="sm"
+        style="width: 100px"
+        color={active ? "warning" : "secondary"}
         on:click={() => {
             workingDay.changeTime(v, selectedDay);
         }}
         >{timeSlot.hour === 0 ? "00" : timeSlot.hour}
         {timeSlot.minute === 0 ? "00" : timeSlot.minute}
-    </button>
+    </Button>
 {/if}
 
 <style>
-    .timeSlot {
-        width: 100px;
-        color: white;
-    }
-    .active {
-        background-color: blue;
-    }
-    .notActive {
-        background-color: darkgoldenrod;
-    }
 </style>
