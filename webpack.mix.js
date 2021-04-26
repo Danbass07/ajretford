@@ -2,7 +2,7 @@ const mix = require("laravel-mix");
 
 require("laravel-mix-svelte");
 
-mix.js("resources/js/app.js", "public/js")
+mix.js("resources/js/app.js", "resources/js/website.js", "public/js")
     .sass("resources/sass/app.scss", "public/css")
     .svelte({
         dev: true,

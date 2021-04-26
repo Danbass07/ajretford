@@ -76,7 +76,7 @@
 
         {#if action === "acceptJobs"}
             <div transition:fade>
-                <h1>Avaiable Offers</h1>
+                <h1>Avaiable Jobs</h1>
             </div>
         {/if}
 
