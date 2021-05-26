@@ -9,7 +9,7 @@
     let workDays;
     let selectedDay = DateTime.local();
     let dayModificator = 0;
-
+$:console.log('test')
     const unsubscribeTimeline = timeline.subscribe((days) => {
         workDays = days;
     });

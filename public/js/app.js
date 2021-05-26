@@ -34893,6 +34893,8 @@ function instance($$self, $$props, $$invalidate) {
     return console.log("pick day");
   };
 
+  $: console.log("test");
+
   return [action, workDays, selectedDay, changeDay, actionController, pick_a_day_handler, pick_a_time_handler, pick_a_hour_handler];
 }
 
@@ -36904,7 +36906,7 @@ function create_else_block(ctx) {
 
       if (dirty &
       /*$$scope, timeSlot*/
-      129) {
+      65) {
         button_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -36926,7 +36928,7 @@ function create_else_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(button, detaching);
     }
   };
-} // (30:0) {#if timeSlot.minute === 0}
+} // (27:0) {#if timeSlot.minute === 0}
 
 
 function create_if_block(ctx) {
@@ -36968,7 +36970,7 @@ function create_if_block(ctx) {
 
       if (dirty &
       /*$$scope, timeSlot*/
-      129) {
+      65) {
         button_changes.$$scope = {
           dirty: dirty,
           ctx: ctx
@@ -36990,7 +36992,7 @@ function create_if_block(ctx) {
       (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.destroy_component)(button, detaching);
     }
   };
-} // (40:4) <Button          size="sm"          style="width: 100px"          color={active ? "warning" : "secondary"}          on:click={pickAtime}          >
+} // (37:4) <Button          size="sm"          style="width: 100px"          color={active ? "warning" : "secondary"}          on:click={pickAtime}          >
 
 
 function create_default_slot_1(ctx) {
@@ -37040,7 +37042,7 @@ function create_default_slot_1(ctx) {
       if (detaching) (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.detach)(t2);
     }
   };
-} // (31:4) <Button          size="sm"          style="width: 100px"          color={active ? "warning" : "secondary"}          on:click={pickAhour}          >
+} // (28:4) <Button          size="sm"          style="width: 100px"          color={active ? "warning" : "secondary"}          on:click={pickAhour}          >
 
 
 function create_default_slot(ctx) {
@@ -37166,20 +37168,17 @@ function create_fragment(ctx) {
 function instance($$self, $$props, $$invalidate) {
   var timeSlot = $$props.timeSlot;
   var timeSlotindex = $$props.timeSlotindex;
-  var activeDate = $$props.activeDate;
   var dispatch = (0,svelte__WEBPACK_IMPORTED_MODULE_2__.createEventDispatcher)();
   var active;
 
   function pickAtime() {
     dispatch("pick-a-time", {
-      day: activeDate,
       timeSlotindex: timeSlotindex
     });
   }
 
   function pickAhour() {
     dispatch("pick-a-hour", {
-      day: activeDate,
       timeSlotindex: timeSlotindex
     });
   }
@@ -37187,7 +37186,6 @@ function instance($$self, $$props, $$invalidate) {
   $$self.$$set = function ($$props) {
     if ("timeSlot" in $$props) $$invalidate(0, timeSlot = $$props.timeSlot);
     if ("timeSlotindex" in $$props) $$invalidate(4, timeSlotindex = $$props.timeSlotindex);
-    if ("activeDate" in $$props) $$invalidate(5, activeDate = $$props.activeDate);
   };
 
   $$self.$$.update = function () {
@@ -37198,7 +37196,7 @@ function instance($$self, $$props, $$invalidate) {
     }
   };
 
-  return [timeSlot, active, pickAtime, pickAhour, timeSlotindex, activeDate];
+  return [timeSlot, active, pickAtime, pickAhour, timeSlotindex];
 }
 
 var TimePicker = /*#__PURE__*/function (_SvelteComponent) {
@@ -37214,8 +37212,7 @@ var TimePicker = /*#__PURE__*/function (_SvelteComponent) {
     _this = _super.call(this);
     (0,svelte_internal__WEBPACK_IMPORTED_MODULE_0__.init)(_assertThisInitialized(_this), options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__.safe_not_equal, {
       timeSlot: 0,
-      timeSlotindex: 4,
-      activeDate: 5
+      timeSlotindex: 4
     });
     return _this;
   }
